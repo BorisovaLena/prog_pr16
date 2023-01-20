@@ -16,9 +16,9 @@
                 <ComboBoxItem Content="Деление"/>
             </ComboBox>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBox Name="tbOne" Width="50" Margin="10"/>
+                <TextBox Name="tbOne" Text="{Binding One}" Width="50" Margin="10"/>
                 <TextBlock Margin="10" Text="{Binding Position}"/>
-                <TextBox Name="tbTwo" Width="50" Margin="10"/>
+                <TextBox Name="tbTwo" Text="{Binding Two}" Width="50" Margin="10"/>
             </StackPanel>
             <Button Content="Вычислить" Command="{Binding Command}"/>
             <GroupBox Header="Результат:">
