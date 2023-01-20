@@ -9,6 +9,5 @@ namespace pr16
     static class Model
     {
         public static List<char> signsList = new List<char> { '+', '-', '*', '/' };
-        public static int rez = 0;
     }
 }

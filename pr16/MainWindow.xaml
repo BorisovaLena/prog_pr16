@@ -17,12 +17,12 @@
             </ComboBox>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBox Name="tbOne" Width="50" Margin="10"/>
-                <TextBlock Name="tbSimb" Margin="10" Text="{Binding Position}"/>
+                <TextBlock Margin="10" Text="{Binding Position}"/>
                 <TextBox Name="tbTwo" Width="50" Margin="10"/>
             </StackPanel>
-            <Button Name="btnCalc" Content="Вычислить"/>
+            <Button Content="Вычислить" Command="{Binding Command}"/>
             <GroupBox Header="Результат:">
-                <TextBox Name="tbRes"/>
+                <TextBlock Text="{Binding ShowResult}"></TextBlock>
             </GroupBox>
         </StackPanel>
     </Grid>

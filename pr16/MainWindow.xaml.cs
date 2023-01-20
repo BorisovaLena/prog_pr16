@@ -24,8 +24,9 @@ namespace pr16
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = VM;
-            //CommandBindings.Add(VM.bind);
+            DataContext = VM; 
+            CommandBindings.Add(VM.bind);
         }
+
     }
 }
