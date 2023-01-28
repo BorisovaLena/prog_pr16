@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
+﻿using System.ComponentModel;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace pr16
@@ -45,7 +40,7 @@ namespace pr16
                 return Model.res;
             }
         }
-        
+
         public int One
         {
             set
@@ -66,30 +61,22 @@ namespace pr16
 
         public void Command_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            Regex r1 = new Regex("^[0-9]+$");
-            if (r1.IsMatch(Model.one.ToString()) && r1.IsMatch(Model.two.ToString()))
+            switch (cbIndex)
             {
-                switch (cbIndex)
-                {
-                    case 0:
-                        Model.res = (Model.one + Model.two).ToString();
-                        break;
-                    case 1:
-                        Model.res = (Model.one - Model.two).ToString();
-                        break;
-                    case 2:
-                        Model.res = (Model.one * Model.two).ToString();
-                        break;
-                    case 3:
-                        Model.res = (Model.one / Model.two).ToString();
-                        break;
-                    default:
-                        break;
-                }   
-            }
-            else
-            {
-                Model.res = "Введены данные неправильного формата!!! Введите только натуральные числа!!!";
+                case 0:
+                    Model.res = (Model.one + Model.two).ToString();
+                    break;
+                case 1:
+                    Model.res = (Model.one - Model.two).ToString();
+                    break;
+                case 2:
+                    Model.res = (Model.one * Model.two).ToString();
+                    break;
+                case 3:
+                    Model.res = (Model.one / Model.two).ToString();
+                    break;
+                default:
+                    break;
             }
             PropertyChanged(this, new PropertyChangedEventArgs("ShowResult"));
         }
